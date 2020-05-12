@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+class Solution {
+    public static void main(String args[]) {
+        int n;
+        float neg=0,pos=0,zero=0;
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++) {
+            arr[i]=sc.nextInt();
+        }
+
+        for(int i=0;i<n;i++) {
+            if(arr[i]<0)
+                neg++;
+            else if(arr[i]==0)
+                zero++;
+            else
+                pos++;
+        }
+
+        System.out.format("%.6f",pos/n);
+        System.out.println( );
+        System.out.format("%.6f",neg/n);
+        System.out.println( );
+        System.out.format("%.6f",zero/n);
+    }
+}
