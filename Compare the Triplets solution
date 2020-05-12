@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class Solution {
+    public static void main(String args[]) {
+        int alice=0,bob=0;
+        Scanner sc=new Scanner(System.in);
+        
+        int[] arr=new int[3];
+        for(int i=0;i<3;i++) {
+            arr[i]=sc.nextInt();
+        }
+
+        int[] arr2=new int[3];
+        for(int i=0;i<3;i++) {
+            arr2[i]=sc.nextInt();
+        }
+
+        for(int i=0;i<3;i++) {
+            if(arr[i]>arr2[i]) {
+                alice++;
+            }
+            else if(arr[i]==arr2[i]) {
+                alice = alice + 0;
+                bob = bob + 0;
+            }
+            else {
+                bob++;
+            }
+        }
+        System.out.print(alice + " " + bob);
+    }   
+}
