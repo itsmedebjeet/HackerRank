@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class Solution {
+    public static void main(String args[]) {
+        int budget,keyboard,mouse,money=-1;
+        Scanner sc=new Scanner(System.in);
+        budget=sc.nextInt();
+        keyboard=sc.nextInt();
+        mouse=sc.nextInt();
+
+        int[] arr=new int[keyboard];
+        for(int i=0;i<keyboard;i++) {
+            arr[i]=sc.nextInt();
+        }
+
+        int[] arr2=new int[mouse];
+        for(int i=0;i<mouse;i++) {
+            arr2[i]=sc.nextInt();
+        }
+        
+        for(int i=0;i<keyboard;i++) {
+            for(int j=0;j<mouse;j++) {
+                if((arr[i]+arr2[j])<=budget) {
+                    money= money > (arr[i]+arr2[j]) ? money : (arr[i]+arr2[j]);
+                }       
+            }
+        }
+        System.out.println(money);
+    }   
+}
